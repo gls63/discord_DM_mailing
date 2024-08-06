@@ -12,13 +12,13 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 
 client.on('ready', async () => {
   try {
-    const guild = client.guilds.cache.get('GUILD_ID'); // ID вашего сервера
+    const guild = client.guilds.cache.get('983854211844431922'); // ID вашего сервера
     const members = await guild.members.fetch();
 
     for (const [, member] of members) {
       try {
         const dmChannel = await member.createDM();
-        await dmChannel.send('Привет от бота!'); //сообщение рассылки
+        await dmChannel.send('Привет! Давно небыл на нашем сервере ты однако... А мы скучаем без тебя и ждем в нашем крутом мега розыгрыше! Ссылка на сервер: https://discord.gg/EzaZqREztu); //сообщение рассылки
         await delay(10000); // Задержка в 10 секунд
       } catch (error) {
         if (error.code === 50007) {
@@ -34,4 +34,4 @@ client.on('ready', async () => {
 });
 
 
-client.login('BOT_TOKEN'); //токен вашего бота
+client.login('MTI3MDQ5MDgwMDA4OTczMTA5Mg.G7z0jQ.eMFoLG4XO8kZPk-9-c1sNetdEkqVzW62auk3dU'); //токен вашего бота
